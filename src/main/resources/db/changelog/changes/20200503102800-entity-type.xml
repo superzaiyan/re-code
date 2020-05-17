@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="20200503102800-0" author="vegetto">
+        <createTable tableName="type">
+            <column name="id" autoIncrement="true" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="varchar(100)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="created_date_time" type="timestamp" defaultValue="now()"></column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
