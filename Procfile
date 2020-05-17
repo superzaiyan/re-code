@@ -1,0 +1,1 @@
+web: java -jar target/re-code-0.0.1-SNAPSHOT.war
